@@ -1,0 +1,51 @@
+<%- include("partials/header.ejs")%>
+
+    <div class="container border border-light-subtle rounded pb-5 my-5">
+        <div class="px-5">
+            <div class="">
+                <h2 class="fw-bold mt-5">Edit Blog Post</h2>
+                <p class="mb-5">Refine your thoughts and share your insights with the world.</p>
+            </div>
+            <div>
+
+                <form action="/submit" method="POST">
+                    <div class="mb-4">
+                        <label for="title" class="form-label fw-bold fs-5">Post title</label>
+                        <input type="text" name="title" class="form-control" placeholder="Title">
+                    </div> 
+                    <div class="mb-5">
+                        <label for="content" class="form-label fw-bold fs-5">Post Content</label>
+                        <textarea name="content" class="form-control" rows="5"></textarea>
+                    </div>
+                    <div class="d-flex justify-content-end my-4">
+                        <a class="btn btn-secondary px-4 mx-3" href="/" role="button">Cancel</a>
+                        <button type="submit" class="btn btn-success px-4">Save Post</button>
+                    </div>                
+                </form>
+            </div>            
+        </div>
+    </div>
+
+
+
+    <div class="container pt-1 pb-5 hero rounded">
+        <div class="d-flex align-items-center float-start ms-2 pt-5 mt-2 px-4">
+            <img src="/images/blog-profile.jpg" alt="Image" width="150" height="100">
+        </div>    
+        <div>
+            <h3 class="fw-bold mt-5 mb-3 ml-4">Tips for a Great Post</h3>
+            <div>
+                <ul class="list-group tip-list">
+                    <li>Craft a captivating headline that grabs attention.</li>
+                    <li>Structure your content with clear paragraphs and subheadings for readability.</li>
+                    <li>Incorporate relevant images or media to enhance engagement.</li>
+                    <li>Proofread meticulously for grammar and spelling errors.</li>
+                    <li>End with a strong conclusion or a thought-provoking question.</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    
+    
+<%- include("partials/footer.ejs")%>

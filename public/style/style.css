@@ -1,0 +1,29 @@
+.hero{
+    background-color: #F3F9FBFF;
+}
+
+.image {
+    /* top: 112px;
+    left: 760px; */
+    width: 552px;
+    height: 414px;
+    border-radius: 4px;
+}
+
+.card-link{
+    text-decoration: none;
+    color: #7D81E8FF;
+    padding-left: 9rem;
+}
+
+.card-link:hover{
+    color: rgb(37, 42, 194);
+}
+
+.tip-list{
+    list-style: none;
+}
+
+.tip-list li{
+    padding-bottom: .5rem;
+}

@@ -1,0 +1,121 @@
+<%- include("partials/header.ejs")%>
+
+    <!-- <div class="profile">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+
+                </div>
+
+            </div>
+
+        </div>
+    </div> -->
+<div class="mb-5 pb-5">
+    <div class="container">
+        <h2 class="fw-bold my-5 pt-5 mx-5 px-5">My Blog Posts</h2>
+        <div class="row gx-5 justify-content-center mb-5">
+            <div class="col-auto">
+                <div class="card h-100" style="width: 18rem;">
+                    <div class="card-body  d-flex flex-column">
+                        <h5 class="card-title">The Art of Mindful Writing</h5>
+                        <p class="card-text mb-4">Discover how incorporating mindfulness into your writing routine can unlock creativity and reduce stress. Learn simple techniques to stay</p>
+                        <div class="d-flex justify-content-around">
+                            <a class="btn btn-light px-5" href="#" role="button">Edit</a>
+                            <button class="btn btn-light px-4">Delete</button>
+                        </div>             
+                    </div>
+                </div>                
+            </div>
+            <div class="col-auto">
+                <div class="card h-100" style="width: 18rem;">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Mastering React Hooks: A Deep Dive</h5>
+                        <p class="card-text">
+                            Unlock the full potential of React Hooks with this comprehensive guide. 
+                            From useState to useContext, we cover best practices and
+                        </p>
+                        
+                        <!-- This will stay at the bottom -->
+                        <div class="mt-auto d-flex justify-content-around">
+                            <a class="btn btn-light px-5" href="#" role="button">Edit</a>
+                            <button class="btn btn-light px-4">Delete</button>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+            <div class="col-auto">
+                <div class="card h-100" style="width: 18rem;">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">The Future of Remote Work</h5>
+                        <p class="card-text">Explore the evolving landscape of remote work, from effective communication strategies to fostering team cohesion across geographical</p>
+                        
+
+                        <div class="mt-auto d-flex justify-content-around">
+                            <a class="btn btn-light px-5" href="#" role="button">Edit</a>
+                            <button class="btn btn-light px-4">Delete</button>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+        </div>
+        <div class="row gx-5 justify-content-center mb-5">
+            <div class="col-auto">
+                <div class="card h-100" style="width: 18rem;">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Travel Smarter: Essential Tips for Digital Nomads</h5>
+                        <p class="card-text">Embark on your digital nomad journey with confidence. This guide covers everything from finding reliable Wi-Fi to managing your finances</p>
+                        <div class="mt-auto d-flex justify-content-around">
+                            <a class="btn btn-light px-5" href="#" role="button">Edit</a>
+                            <button class="btn btn-light px-4">Delete</button>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+            <div class="col-auto">
+                <div class="card h-100" style="width: 18rem;">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Investing Basics: Starting Your Financial Journey</h5>
+                        <p class="card-text">Demystify the world of investments. Learn about stocks, bonds, and mutual funds, and how to build a diversified portfolio for long-term</p>
+                        <div class="mt-auto d-flex justify-content-around">
+                            <a class="btn btn-light px-5" href="#" role="button">Edit</a>
+                            <button class="btn btn-light px-4">Delete</button>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+            <div class="col-auto">
+                <div class="card h-100" style="width: 18rem;">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">The Power of Storytelling in Content Creation</h5>
+                        <p class="card-text">Captivate your audience with compelling narratives. Discover the principles of effective storytelling and how to weave them into your</p>
+                        <div class="mt-auto d-flex justify-content-around">
+                            <a class="btn btn-light px-5" href="#" role="button">Edit</a>
+                            <button class="btn btn-light px-4">Delete</button>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+        </div>
+        <div class="row gx-5 justify-content-center mb-5">
+            <%if(posts.length > 0 ) {%>
+                <%posts.forEach((post, index) => {%>
+                    <div class="col-auto gx-5 justify-content-center mb-5">
+                        <div class="card h-100" style="width: 18rem;">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title"><%= post.title %></h5>
+                                <p class="card-text"><%= post.content %></p>
+                                <div class="mt-auto d-flex justify-content-around">
+                                    <a href="/edit/<%= index %>" class="btn btn-light px-4">Edit</a>
+                                    <a href="/delete/<%= index %>" class="btn btn-light px-4">Delete</a>
+                                </div>
+                            </div>
+                        </div>                
+                    </div>
+                <%})%>
+            <%}%>
+        </div>
+    </div>
+</div>
+    
+<%- include("partials/footer.ejs")%>

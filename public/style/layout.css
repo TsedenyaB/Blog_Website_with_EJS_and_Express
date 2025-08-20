@@ -1,0 +1,33 @@
+.container {
+    max-width: 1200px;
+}
+
+.big-title{
+    margin-left: -1rem;
+    margin-right: -1rem;
+    width: calc(100% + 2rem);
+    height: 500px;
+    background-image: url("/images/blog-profile.jpg");
+    background-size: contain;
+}
+
+.btn{
+    color: white;
+    background-color: #7D81E8FF;
+}
+.btn :hover{
+    background-color: #454ADEFF;
+}
+
+.card-title{
+    margin-bottom: 1rem;
+}
+
+.card{
+    padding-bottom: 1rem;
+}
+
+.card-img-top {
+  height: 200px;       
+  object-fit: cover;
+}
